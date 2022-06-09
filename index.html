@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Line 478 -->
+<!-- Line 478 & 350 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -28,6 +28,12 @@
 <script>
   if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
+  }
+
+  function newImage(src){
+    var tmp = new Image();
+    tmp.src = src;
+    return tmp
   }
 </script>
 
@@ -61,18 +67,18 @@
       id="result"
       srcdoc="
 <!DOCTYPE html>
-<html lang=&quot;en&quot; >
+<html lang='en' >
 
 <head>
 
-  <meta charset=&quot;UTF-8&quot;>
+  <meta charset='UTF-8'>
   
-<link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
-<meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+<link rel='apple-touch-icon' type='image/png' href='https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png' />
+<meta name='apple-mobile-web-app-title' content='CodePen'>
 
-<link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+<link rel='shortcut icon' type='image/x-icon' href='https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico' />
 
-<link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg&quot; color=&quot;#111&quot; />
+<link rel='mask-icon' type='image/x-icon' href='https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg' color='#111' />
 
 
   <title>CodePen - Cool Layout with Complex Chainable Animation</title>
@@ -89,7 +95,7 @@
 
 body {
   background: #1f1f1f;
-  font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 .cont {
@@ -141,7 +147,7 @@ body {
   will-change: transform;
 }
 .el__bg:before {
-  content: &quot;&quot;;
+  content: '';
   position: absolute;
   left: 0;
   top: -5%;
@@ -159,7 +165,7 @@ body {
   transition: transform 0.8s;
 }
 .el__bg:after {
-  content: &quot;&quot;;
+  content: '';
   z-index: 1;
   position: absolute;
   left: 0;
@@ -242,7 +248,7 @@ body {
   transition: all 0s 1.4s;
 }
 .el__close-btn:before, .el__close-btn:after {
-  content: &quot;&quot;;
+  content: '';
   position: absolute;
   left: 0;
   top: 50%;
@@ -348,7 +354,7 @@ body {
 }
 .el:nth-child(1) .el__bg:before {
   transition-delay: 0s;
-  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-3.jpg&quot;);
+  background-image: url('https://i2.wp.com/i.pinimg.com/originals/0a/45/e0/0a45e03a0790b4f85d44415de1541dd8.png');
 }
 .el:nth-child(2) {
   transform: translate3d(105.2083333333%, 0, 0);
@@ -367,7 +373,7 @@ body {
 }
 .el:nth-child(2) .el__bg:before {
   transition-delay: 0.1s;
-  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-4.jpg&quot;);
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-4.jpg');
 }
 .el:nth-child(3) {
   transform: translate3d(210.4166666667%, 0, 0);
@@ -386,7 +392,7 @@ body {
 }
 .el:nth-child(3) .el__bg:before {
   transition-delay: 0.2s;
-  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-5.jpg&quot;);
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-5.jpg');
 }
 .el:nth-child(4) {
   transform: translate3d(315.625%, 0, 0);
@@ -405,7 +411,7 @@ body {
 }
 .el:nth-child(4) .el__bg:before {
   transition-delay: 0.3s;
-  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-6.jpg&quot;);
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-6.jpg');
 }
 .el:nth-child(5) {
   transform: translate3d(420.8333333333%, 0, 0);
@@ -424,7 +430,7 @@ body {
 }
 .el:nth-child(5) .el__bg:before {
   transition-delay: 0.4s;
-  background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-7.jpg&quot;);
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-7.jpg');
 }
 .el:hover .el__bg:after {
   opacity: 0;
@@ -468,123 +474,125 @@ body {
   
   <script>
   if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+    window.parent.postMessage('resize', '*');
   }
 </script>
 
 
 </head>
 
-<body translate=&quot;no&quot; >
-  <div class=&quot;cont s--inactive&quot;>
+<body translate='no' >
+  <div class='cont s--inactive'>
   <!-- cont inner start -->
-  <div class=&quot;cont__inner&quot;>
+  <div class='cont__inner'>
     <!-- el start -->
-    <div class=&quot;el&quot;>
-      <div class=&quot;el__overflow&quot;>
-        <div class=&quot;el__inner&quot;>
-          <div class=&quot;el__bg&quot;></div>
-          <div class=&quot;el__preview-cont&quot;>
-            <h2 class=&quot;el__heading&quot;>Pokemon</h2>
+    <div class='el'>
+      <div class='el__overflow'>
+        <div class='el__inner'>
+          <div class='el__bg'></div>
+          <div class='el__preview-cont'>
+            <h2 class='el__heading'>Pokemon</h2>
           </div>
-          <div class=&quot;el__content&quot;>
-            <div class=&quot;el__text&quot;>Pokemon</div>
-            <div class=&quot;el__close-btn&quot;></div>
+          <div class='el__content'>
+            <div class='el__text'>Pokemon</div>
+            <div class='el__close-btn'></div>
           </div>
         </div>
       </div>
-      <div class=&quot;el__index&quot;>
-        <div class=&quot;el__index-back&quot;>Pokemon</div>
-        <div class=&quot;el__index-front&quot;>
-          <div class=&quot;el__index-overlay&quot; data-index=&quot;Pokemon&quot;>Pokemon</div>
+      <div class='el__index'>
+        <div class='el__index-back'></div>
+        <div class='el__index-front'>
+          <div class='el__index-overlay' data-index=''>
+          </div>
+          
         </div>
       </div>
     </div>
     <!-- el end -->
     <!-- el start -->
-    <div class=&quot;el&quot;>
-      <div class=&quot;el__overflow&quot;>
-        <div class=&quot;el__inner&quot;>
-          <div class=&quot;el__bg&quot;></div>
-          <div class=&quot;el__preview-cont&quot;>
-            <h2 class=&quot;el__heading&quot;>Section 2</h2>
+    <div class='el'>
+      <div class='el__overflow'>
+        <div class='el__inner'>
+          <div class='el__bg'></div>
+          <div class='el__preview-cont'>
+            <h2 class='el__heading'>Section 2</h2>
           </div>
-          <div class=&quot;el__content&quot;>
-            <div class=&quot;el__text&quot;>Whatever</div>
-            <div class=&quot;el__close-btn&quot;></div>
-          </div>
-        </div>
-      </div>
-      <div class=&quot;el__index&quot;>
-        <div class=&quot;el__index-back&quot;>2</div>
-        <div class=&quot;el__index-front&quot;>
-          <div class=&quot;el__index-overlay&quot; data-index=&quot;2&quot;>2</div>
-        </div>
-      </div>
-    </div>
-    <!-- el end -->
-    <!-- el start -->
-    <div class=&quot;el&quot;>
-      <div class=&quot;el__overflow&quot;>
-        <div class=&quot;el__inner&quot;>
-          <div class=&quot;el__bg&quot;></div>
-          <div class=&quot;el__preview-cont&quot;>
-            <h2 class=&quot;el__heading&quot;>Section 3</h2>
-          </div>
-          <div class=&quot;el__content&quot;>
-            <div class=&quot;el__text&quot;>Whatever</div>
-            <div class=&quot;el__close-btn&quot;></div>
+          <div class='el__content'>
+            <div class='el__text'>Whatever</div>
+            <div class='el__close-btn'></div>
           </div>
         </div>
       </div>
-      <div class=&quot;el__index&quot;>
-        <div class=&quot;el__index-back&quot;>3</div>
-        <div class=&quot;el__index-front&quot;>
-          <div class=&quot;el__index-overlay&quot; data-index=&quot;3&quot;>3</div>
+      <div class='el__index'>
+        <div class='el__index-back'>2</div>
+        <div class='el__index-front'>
+          <div class='el__index-overlay' data-index='2'>2</div>
         </div>
       </div>
     </div>
     <!-- el end -->
     <!-- el start -->
-    <div class=&quot;el&quot;>
-      <div class=&quot;el__overflow&quot;>
-        <div class=&quot;el__inner&quot;>
-          <div class=&quot;el__bg&quot;></div>
-          <div class=&quot;el__preview-cont&quot;>
-            <h2 class=&quot;el__heading&quot;>Section 4</h2>
+    <div class='el'>
+      <div class='el__overflow'>
+        <div class='el__inner'>
+          <div class='el__bg'></div>
+          <div class='el__preview-cont'>
+            <h2 class='el__heading'>Section 3</h2>
           </div>
-          <div class=&quot;el__content&quot;>
-            <div class=&quot;el__text&quot;>Whatever</div>
-            <div class=&quot;el__close-btn&quot;></div>
+          <div class='el__content'>
+            <div class='el__text'>Whatever</div>
+            <div class='el__close-btn'></div>
           </div>
         </div>
       </div>
-      <div class=&quot;el__index&quot;>
-        <div class=&quot;el__index-back&quot;>4</div>
-        <div class=&quot;el__index-front&quot;>
-          <div class=&quot;el__index-overlay&quot; data-index=&quot;4&quot;>4</div>
+      <div class='el__index'>
+        <div class='el__index-back'>3</div>
+        <div class='el__index-front'>
+          <div class='el__index-overlay' data-index='3'>3</div>
         </div>
       </div>
     </div>
     <!-- el end -->
     <!-- el start -->
-    <div class=&quot;el&quot;>
-      <div class=&quot;el__overflow&quot;>
-        <div class=&quot;el__inner&quot;>
-          <div class=&quot;el__bg&quot;></div>
-          <div class=&quot;el__preview-cont&quot;>
-            <h2 class=&quot;el__heading&quot;>Section 5</h2>
+    <div class='el'>
+      <div class='el__overflow'>
+        <div class='el__inner'>
+          <div class='el__bg'></div>
+          <div class='el__preview-cont'>
+            <h2 class='el__heading'>Section 4</h2>
           </div>
-          <div class=&quot;el__content&quot;>
-            <div class=&quot;el__text&quot;>Whatever</div>
-            <div class=&quot;el__close-btn&quot;></div>
+          <div class='el__content'>
+            <div class='el__text'>Whatever</div>
+            <div class='el__close-btn'></div>
           </div>
         </div>
       </div>
-      <div class=&quot;el__index&quot;>
-        <div class=&quot;el__index-back&quot;>5</div>
-        <div class=&quot;el__index-front&quot;>
-          <div class=&quot;el__index-overlay&quot; data-index=&quot;5&quot;>5</div>
+      <div class='el__index'>
+        <div class='el__index-back'>4</div>
+        <div class='el__index-front'>
+          <div class='el__index-overlay' data-index='4'>4</div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class='el'>
+      <div class='el__overflow'>
+        <div class='el__inner'>
+          <div class='el__bg'></div>
+          <div class='el__preview-cont'>
+            <h2 class='el__heading'>Section 5</h2>
+          </div>
+          <div class='el__content'>
+            <div class='el__text'>Whatever</div>
+            <div class='el__close-btn'></div>
+          </div>
+        </div>
+      </div>
+      <div class='el__index'>
+        <div class='el__index-back'>5</div>
+        <div class='el__index-front'>
+          <div class='el__index-overlay' data-index='5'>5</div>
         </div>
       </div>
     </div>
@@ -593,10 +601,10 @@ body {
   <!-- cont inner end -->
 </div>
 
-    <script src=&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js&quot;></script>
+    <script src='https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js'></script>
 
   
-      <script id=&quot;rendered-js&quot; >
+      <script id='rendered-js' >
 var $cont = document.querySelector('.cont');
 var $elsArr = [].slice.call(document.querySelectorAll('.el'));
 var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
@@ -633,7 +641,7 @@ $closeBtnsArr.forEach(function ($btn) {
       sandbox="allow-forms allow-modals allow-pointer-lock allow-popups  allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share" allowTransparency="true"
       allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
       </iframe>
-
+      
   </div>
 </body>
 </html>
